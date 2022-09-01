@@ -70,7 +70,8 @@ int main()
     char *msg4 = "Hilo 4";
     int ret1, ret2, ret3, ret4;
     pthread_t hilo1, hilo2, hilo3, hilo4;
-
+    
+    printf("El PID[%d] del proceso es: %d\n", getpid(), getpid());
     ret1 = pthread_create(&hilo1, NULL, funcionAcumulado, (void *)msg1);
     ret2 = pthread_create(&hilo2, NULL, funcionProductoria, (void *)msg2);
     ret3 = pthread_create(&hilo3, NULL, funcionPotencia, (void *)msg3);
